@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ar" lang="ar" dir="rtl">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>السيارات والحجز - مكتب المدار</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="myFunctions.js"></script>
+</head>
+<body>
+
+    <div id="header">
+        <h1>مكتب المدار لتأجير السيارات</h1>
+        <p>اختر السيارة المناسبة من القائمة واستكمل نموذج طلب الحجز</p>
+    </div>
+
+    <div id="nav">
+        <ul>
+            <li><a href="index.html">الصفحة الرئيسية</a></li>
+            <li><a href="AboutUs.html">من نحن</a></li>
+            <li><a href="Cars.html" class="active">السيارات والحجز</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <h2>قائمة السيارات المتاحة للتأجير</h2>
+        <p>انقر على زر "التفاصيل" لرؤية المواصفات الفنية للسيارة، وحدد اختيار السيارة المطلوبة للحجز:</p>
+
+        <form id="car-selection-form" action="#">
+            <table class="cars-table">
+                <thead>
+                    <tr>
+                        <th>الرمز</th>
+                        <th>الموديل</th>
+                        <th>سنة الصنع</th>
+                        <th>السعر اليومي</th>
+                        <th>إظهار التفاصيل</th>
+                        <th>اختيار</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- السيارة الأولى -->
+                    <tr class="main-car-row">
+                        <td>MD-101</td>
+                        <td>Kia Cerato</td>
+                        <td>2023</td>
+                        <td>270,000 ل.س</td>
+                        <td><button type="button" class="btn-toggle-details">التفاصيل</button></td>
+                        <td><input type="checkbox" name="selectedCar" class="car-checkbox" value="MD-101" data-model="Kia Cerato" data-price="270000" /></td>
+                    </tr>
+                    <tr class="car-details-row">
+                        <td colspan="6">
+                            <div class="details-box">
+                                <strong>المواصفات الفنية لـ MD-101:</strong>
+                                <ul>
+                                    <li><strong>نوع الوقود:</strong> بنزين 95</li>
+                                    <li><strong>ناقل الحركة:</strong> أتوماتيك 6 سرعات</li>
+                                    <li><strong>عدد المقاعد:</strong> 5 مقاعد سيدان</li>
+                                    <li><strong>عداد الكيلومترات:</strong> 12,000 كم</li>
+                                    <li><strong>اللون:</strong> كحلي ميتاليك</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- السيارة الثانية -->
+                    <tr class="main-car-row">
+                        <td>MD-102</td>
+                        <td>Toyota RAV4</td>
+                        <td>2024</td>
+                        <td>450,000 ل.س</td>
+                        <td><button type="button" class="btn-toggle-details">التفاصيل</button></td>
+                        <td><input type="checkbox" name="selectedCar" class="car-checkbox" value="MD-102" data-model="Toyota RAV4" data-price="450000" /></td>
+                    </tr>
+                    <tr class="car-details-row">
+                        <td colspan="6">
+                            <div class="details-box">
+                                <strong>المواصفات الفنية لـ MD-102:</strong>
+                                <ul>
+                                    <li><strong>نوع الوقود:</strong> بنزين / هيبرد</li>
+                                    <li><strong>ناقل الحركة:</strong> أتوماتيك دفع رباعي AWD</li>
+                                    <li><strong>عدد المقاعد:</strong> 5 مقاعد SUV</li>
+                                    <li><strong>عداد الكيلومترات:</strong> 8,000 كم</li>
+                                    <li><strong>اللون:</strong> أبيض لؤلؤي</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- السيارة الثالثة -->
+                    <tr class="main-car-row">
+                        <td>MD-103</td>
+                        <td>Hyundai Accent</td>
+                        <td>2022</td>
+                        <td>230,000 ل.س</td>
+                        <td><button type="button" class="btn-toggle-details">التفاصيل</button></td>
+                        <td><input type="checkbox" name="selectedCar" class="car-checkbox" value="MD-103" data-model="Hyundai Accent" data-price="230000" /></td>
+                    </tr>
+                    <tr class="car-details-row">
+                        <td colspan="6">
+                            <div class="details-box">
+                                <strong>المواصفات الفنية لـ MD-103:</strong>
+                                <ul>
+                                    <li><strong>نوع الوقود:</strong> بنزين اقتصادي</li>
+                                    <li><strong>ناقل الحركة:</strong> أتوماتيك</li>
+                                    <li><strong>عدد المقاعد:</strong> 5 مقاعد</li>
+                                    <li><strong>عداد الكيلومترات:</strong> 30,000 كم</li>
+                                    <li><strong>اللون:</strong> فضي</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- السيارة الرابعة -->
+                    <tr class="main-car-row">
+                        <td>MD-104</td>
+                        <td>Mazda 3</td>
+                        <td>2023</td>
+                        <td>310,000 ل.س</td>
+                        <td><button type="button" class="btn-toggle-details">التفاصيل</button></td>
+                        <td><input type="checkbox" name="selectedCar" class="car-checkbox" value="MD-104" data-model="Mazda 3" data-price="310000" /></td>
+                    </tr>
+                    <tr class="car-details-row">
+                        <td colspan="6">
+                            <div class="details-box">
+                                <strong>المواصفات الفنية لـ MD-104:</strong>
+                                <ul>
+                                    <li><strong>نوع الوقود:</strong> بنزين ممتاز</li>
+                                    <li><strong>ناقل الحركة:</strong> أوتوماتيك SkyActiv</li>
+                                    <li><strong>عدد المقاعد:</strong> 5 مقاعد</li>
+                                    <li><strong>عداد الكيلومترات:</strong> 19,000 كم</li>
+                                    <li><strong>اللون:</strong> أحمر كريستالي</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- السيارة الخامسة -->
+                    <tr class="main-car-row">
+                        <td>MD-105</td>
+                        <td>Nissan Patrol</td>
+                        <td>2023</td>
+                        <td>650,000 ل.س</td>
+                        <td><button type="button" class="btn-toggle-details">التفاصيل</button></td>
+                        <td><input type="checkbox" name="selectedCar" class="car-checkbox" value="MD-105" data-model="Nissan Patrol" data-price="650000" /></td>
+                    </tr>
+                    <tr class="car-details-row">
+                        <td colspan="6">
+                            <div class="details-box">
+                                <strong>المواصفات الفنية لـ MD-105:</strong>
+                                <ul>
+                                    <li><strong>نوع الوقود:</strong> بنزين V8</li>
+                                    <li><strong>ناقل الحركة:</strong> أوتوماتيك 7 سرعات 4WD</li>
+                                    <li><strong>عدد المقاعد:</strong> 7 مقاعد عائلية فاخرة</li>
+                                    <li><strong>عداد الكيلومترات:</strong> 22,000 كم</li>
+                                    <li><strong>اللون:</strong> أسود ميتاليك</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="center-btn">
+                <button type="button" id="btn-continue" class="btn-primary">متابعة الحجز</button>
+            </div>
+        </form>
+
+        <!-- نموذج طلب الحجز -->
+        <div id="booking-section" style="display: none;">
+            <hr />
+            <h2>نموذج طلب الحجز الإلكتروني</h2>
+            <form id="booking-form" action="#" onsubmit="return handleFormSubmit(event);">
+                <div class="form-group">
+                    <label for="fullName">الاسم الكامل (أحرف هجائية عربية فقط):</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="أدخل الاسم بالعربية" />
+                    <span class="error-msg" id="fullName-err"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="nationalId">الرقم الوطني (11 رقم - إلزامي): <span class="required">*</span></label>
+                    <input type="text" id="nationalId" name="nationalId" placeholder="مثال: 01012345678" />
+                    <span class="error-msg" id="nationalId-err"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="startDate">تاريخ بداية التأجير: <span class="required">*</span></label>
+                    <input type="date" id="startDate" name="startDate" />
+                    <span class="error-msg" id="startDate-err"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="endDate">تاريخ نهاية التأجير: <span class="required">*</span></label>
+                    <input type="date" id="endDate" name="endDate" />
+                    <span class="error-msg" id="endDate-err"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">رقم الموبايل (Syriatel / MTN):</label>
+                    <input type="text" id="mobile" name="mobile" placeholder="مثال: 0944123456" />
+                    <span class="error-msg" id="mobile-err"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="text" id="email" name="email" placeholder="example@domain.com" />
+                    <span class="error-msg" id="email-err"></span>
+                </div>
+
+                <div class="center-btn">
+                    <input type="submit" value="إرسال طلب الحجز" class="btn-submit" />
+                </div>
+            </form>
+        </div>
+
+        <!-- النافذة المنبثقة لملخص الحجز -->
+        <div id="result-modal" class="modal-overlay" style="display: none;">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeResultModal()">&times;</span>
+                <h3>نتيجة وتفاصيل طلب الحجز</h3>
+                <div id="modal-details-content">
+                    <!-- سيتم عرض النتائج هنا -->
+                </div>
+                <div class="center-btn" style="margin-top: 15px;">
+                    <button type="button" onclick="closeResultModal()" class="btn-primary">إغلاق النافذة</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <p>جميع الحقوق محفوظة &copy; 2026 - مكتب المدار لتأجير السيارات</p>
+    </div>
+
+</body>
+</html>
